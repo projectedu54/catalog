@@ -185,5 +185,10 @@ public class CatalogService {
         }
     }
 
+    public boolean existsById(Long id) {
+        return catalogRepository.existsById(id);
+    }
+
+
 
 }
