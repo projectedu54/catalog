@@ -114,6 +114,9 @@ public class CatalogController {
         catalogService.deleteCatalog(id);
     }
 
-
+    @GetMapping("/{id}/exists")
+    public ResponseEntity<Boolean> exists(@PathVariable Long id) {
+        return ResponseEntity.ok(catalogService.existsById(id));
+    }
 
 }
